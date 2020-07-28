@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ranchers&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(247, 253, 159, 0.76);
+    height: 100px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Ranchers', cursive;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+            's r r'
+            'm r r';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 34px auto;
+}
+
+.searchEl {
+    background-color: rgba(201, 253, 159, 0.76);
+    grid-area: s;
+    height: min-content;
+    padding: 5px;
+    text-align: center;
+    /* width: 200px; */
+}
+
+.recipesEl {
+    
+    grid-area: r;
+    height: 400px;
+    width: 100%;
+}
+
+#searchResults {
+    background-color: rgba(159, 253, 233, 0.76);
+    height: 100%;
+}
+
+.recipe {
+    cursor: pointer;
+}
+
+#recipeDisplay {
+    background-color: rgba(253, 159, 237, 0.76);
+    height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.musicEl {
+    background-color: rgba(253, 201, 159, 0.76);
+    grid-area: m;
+    
+}
+
+footer {
+    background-color: rgba(223, 159, 253, 0.76);
+    width: 100%;
+}
