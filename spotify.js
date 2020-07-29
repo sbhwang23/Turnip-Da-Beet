@@ -1,7 +1,10 @@
 let client_id = "67da0e797c71476a92b66060037abb0c";
 let client_secret = "1825c9d95ef44bce95ba85bdc50c0c5e";
 let initialCall = "https://accounts.spotify.com/api/token";
-//let secondCall = "https://api.spotify.com/v1/search";
+let ingredient1 = "carrot"
+//let indgredient2 = "" &20${ ingredient2 }
+//let ingredient3 = "" &20${ ingredient3 }
+let secondCall = `https://api.spotify.com/v1/search?q=${ ingredient1 }&type=track?limit=$[limit]`;
 
 $.ajax({
     url: initialCall,
@@ -18,14 +21,16 @@ $.ajax({
 
     console.log(response);
 
-//     $.ajax({
-//         url: secondCall,
-//         method:"GET",
-//         headers: {
-//             'Authorization': `Bearer ${ token }`
-//         }
-//     }).then(function (response) {
+     $.ajax({
+         url: secondCall,
+         method:"GET",
+         headers: {
+             'Authorization': `Bearer ${ token }`
+        }
+    }).then(function (response) {
 
-//        console.log(response);
-//     })
+       console.log(response);
+     })
 });
+
+//limit10
