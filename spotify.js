@@ -1,7 +1,7 @@
 let client_id = "67da0e797c71476a92b66060037abb0c";
 let client_secret = "1825c9d95ef44bce95ba85bdc50c0c5e";
 let initialCall = "https://accounts.spotify.com/api/token";
-let secondCall = "";
+//let secondCall = "https://api.spotify.com/v1/search";
 
 $.ajax({
     url: initialCall,
@@ -14,7 +14,7 @@ $.ajax({
 
 }).then(function (response) {
     
-    //let token = response.JSON
+    let token = JSON.access_token;
 
     console.log(response);
 
