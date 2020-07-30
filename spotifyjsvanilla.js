@@ -1,5 +1,5 @@
 let ingredient1 = "carrot"
-//let indgredient2 = "" &20${ ingredient2 }
+///let indgredient2 = "" &20${ ingredient2 }
 //let ingredient3 = "" &20${ ingredient3 }
 let secondCall = `https://api.spotify.com/v1/search?q=${ ingredient1 }&type=playlist, track`;
 
