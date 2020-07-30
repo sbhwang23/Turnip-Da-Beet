@@ -2,14 +2,8 @@
 //let client_id = "67da0e797c71476a92b66060037abb0c";
 //let client_secret = "1825c9d95ef44bce95ba85bdc50c0c5e";
 let initialCall = "https://accounts.spotify.com/api/token";
-let ingredient1 = "CHICKEN";
-limit= 10;
-//let tracks = [];
-//let indgredient2 = "" &20${ ingredient2 }
-//let ingredient3 = "" &20${ ingredient3 }
 
-
-$(document).ready(function() {  
+function displayPlaylist(ingredient1) {  
     $.ajax({
         url: initialCall,
         method: 'POST',
@@ -34,7 +28,7 @@ $(document).ready(function() {
             }
                 
        }).then(function(response) {
-        //$('.musicEl').empty();
+           //let x = Math.floor(Math.random() * 49);
         let img1 = $('<img>').attr('src', response.tracks.items[0].album.images[2].url);
         let img2 = $('<img>').attr('src', response.tracks.items[1].album.images[2].url);
         let img3 = $('<img>').attr('src', response.tracks.items[2].album.images[2].url);
@@ -51,7 +45,6 @@ $(document).ready(function() {
         let link6 = $('<a>').attr('href', response.tracks.items[1].external_urls.spotify).text(response.tracks.items[5].name);
         let link7 = $('<a>').attr('href', response.tracks.items[1].external_urls.spotify).text(response.tracks.items[6].name);
         let link8 = $('<a>').attr('href', response.tracks.items[1].external_urls.spotify).text(response.tracks.items[7].name);
-        //let seeMore = $('<a>').attr('href', response.tracks.href).text("SEE MORE");
         $('#btn1').append(link1);
         $('#btn2').append(link2);
         $('#btn3').append(link3);
@@ -68,7 +61,6 @@ $(document).ready(function() {
         $('.img6').append(img6);
         $('.img7').append(img7);
         $('.img8').append(img8);
-        //$('.see-more').append(seeMore);
         $('.title').append(`<h2> ${ingredient1} PLAYLIST</h2>`)
         $('.track1').append(`<p>${response.tracks.items[0].artists[0].name}</p>`);
         $('.track2').append(`<p>${response.tracks.items[1].artists[0].name}</p>`);
@@ -83,45 +75,11 @@ $(document).ready(function() {
         console.log(response.tracks);
         });
     });
-});    
+}; 
 
-//limit10
+$("#searchButton").on("click", function (event) {
+    event.preventDefault();
+    let ingredient1 = $("#userInput").val().trim();
 
-// let thirdCall = `https://api.spotify.com/v1/tracks/{id}`
-//$.ajax({
-   // url: thirdCall,
-   // method: "GET",
-    //headers: {
-        //'Authorization': `Bearer ${token}`
- //  },
-
-//}).then(function (response) {
-//})
-
-//function renderas() {
-    //$("#track-view").empty();
-    //for (let i = 0; i < tracks.length; i++) {
-       // let a = $("<a>");
-        //a.addClass("track");
-        //a.attr("data-name", tracks[i]);
-       // a.text(tracks[i]);
-        //$("#as-view").append(a);
-    //}
-//}
-
-//$("#choose-track").on("click", function (event) {
-    //event.preventDefault();
-   // let track = $("#track-choice").val().trim();
-   // tracks.push(track);
-   // renderas();
-
-    //displayIngredientTracks(ingredient1);
-//});
-
-//$(document).on("click", ".track", function (event) {
- //   event.preventDefault();
- //   let track = $(this).attr("data-name");
- //   console.log(track);
- //   displayIngredientTracks(track);
-
-//});
+    displayPlaylist(ingredient1);
+});
