@@ -30,7 +30,7 @@ const grabPlaylist = (function() {
         });
 
         const data = await result.json();
-        console.log(response.JSON)
+        console.log()
     }
     return {
         getToken() {
