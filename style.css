@@ -66,7 +66,10 @@ h1 {
 .musicEl {
     background-color: rgba(253, 201, 159, 0.76);
     grid-area: m;
-    
+}
+
+.title {
+    text-transform: uppercase;
 }
 
 footer {
