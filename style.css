@@ -3,3 +3,6 @@ body {
     color: #333;
     background-color: antiquewhite;
 }
+.title {
+    text-transform: uppercase;
+}
