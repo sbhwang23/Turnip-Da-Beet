@@ -34,6 +34,7 @@ $(document).ready(function() {
             }
                 
        }).then(function(response) {
+        //$('.musicEl').empty();
         let img1 = $('<img>').attr('src', response.tracks.items[0].album.images[2].url);
         let img2 = $('<img>').attr('src', response.tracks.items[1].album.images[2].url);
         let img3 = $('<img>').attr('src', response.tracks.items[2].album.images[2].url);
