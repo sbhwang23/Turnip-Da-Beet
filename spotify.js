@@ -30,7 +30,7 @@ $(document).ready(function() {
             url: secondCall,
             method:'GET',
             headers: {
-            'Authorization': `Bearer ${ "BQDnrt0pbq8u2Pl1QUy4FdY2YBgj9IHxw8E-rgHIXRBtObXD2UIltRWN8ZweFwlbMV-PPBDdi8haNrTE_ng" }`
+            'Authorization': `Bearer ${ accessToken }`
             }
                 
        }).then(function(response) {
