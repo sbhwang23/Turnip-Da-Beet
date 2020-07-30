@@ -9,7 +9,7 @@
 }
 
 header {
-    background-color: rgba(247, 253, 159, 0.76);
+    background-color: rgba(249, 253, 184, 0.911);
     height: 100px;
     padding: 20px;
     text-align: center;
@@ -18,9 +18,13 @@ header {
 
 h1 {
     font-family: 'Ranchers', cursive;
+    color:  rgb(192, 9, 79);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px rgb(214, 31, 101), 0 0 20px rgb(214, 31, 101), 0 0 25px rgb(214, 31, 101), 0 0 30px rgb(214, 31, 101), 0 0 35px rgb(214, 31, 101);
 }
 
 .grid {
+
+    background-image: linear-gradient(rgba(247, 253, 159, 0.76), rgb(129, 27, 129));
     display: grid;
     grid-template-areas: 
             's r r'
@@ -30,7 +34,6 @@ h1 {
 }
 
 .searchEl {
-    background-color: rgba(201, 253, 159, 0.76);
     grid-area: s;
     height: min-content;
     padding: 5px;
@@ -39,15 +42,13 @@ h1 {
 }
 
 .recipesEl {
-    
     grid-area: r;
-    height: 400px;
+    /* height: 100%; */
     width: 100%;
 }
 
 #searchResults {
-    background-color: rgba(159, 253, 233, 0.76);
-    height: 100%;
+    /* height: 100%; */
 }
 
 .recipe {
@@ -55,8 +56,7 @@ h1 {
 }
 
 #recipeDisplay {
-    background-color: rgba(253, 159, 237, 0.76);
-    height: 100%;
+    /* height: 100%; */
 }
 
 .hide {
@@ -64,8 +64,10 @@ h1 {
 }
 
 .musicEl {
-    background-color: rgba(253, 201, 159, 0.76);
     grid-area: m;
+    height: 70.4%;
+    overflow: scroll;
+    padding: 10px;
 }
 
 .title {
@@ -73,6 +75,7 @@ h1 {
 }
 
 footer {
-    background-color: rgba(223, 159, 253, 0.76);
+    background-color: rgb(129, 27, 129);
+    text-align: center;
     width: 100%;
 }
