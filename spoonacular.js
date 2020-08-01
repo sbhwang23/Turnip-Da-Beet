@@ -9,19 +9,64 @@ function displayRecipes(spoonIngredient) {
             
     }).then(function(response) {
 
+        let id1 = response[0].id
+        let id2 = response[1].id
+        let id3 = response[2].id
         let img1 = $('<img>').attr('src', response[0].image);
         let img2 = $('<img>').attr('src', response[1].image);
         let img3 = $('<img>').attr('src', response[2].image);
-        $('#searchTitle1').append(`<h4>${response[0].title}</p>`);
-        $('#searchTitle2').append(`<h4>${response[1].title}</p>`);
-        $('#searchTitle3').append(`<h4>${response[2].title}</p>`);
-        //let link1 = $('<a>').attr('href', response[0].items[0].external_urls.spotify).text(response.tracks.items[0].name);
         $('#searchPicture1').append(img1);
         $('#searchPicture2').append(img2);
         $('#searchPicture3').append(img3);
-        //$('#searchTitle2').append(link1);
         console.log(response);
 
+        let recipeCall1 = `https://api.spoonacular.com/recipes/${ id1 }/information?apiKey=${ spoonKey }&includeNutrition=false`
+        
+        $.ajax({
+            url: recipeCall1,
+            method:'GET',
+                
+        }).then(function(response) {
+
+            let link1 = $('<a>').attr('href', response.sourceUrl).text(response.title);
+
+            $('#searchTitle1').append(link1);
+            console.log(response);
+            
+            let recipeCall2 = `https://api.spoonacular.com/recipes/${ id2 }/information?apiKey=${ spoonKey }&includeNutrition=false`
+        
+            $.ajax({
+                url: recipeCall2,
+                method:'GET',
+                //headers: {
+                //    'Content-Type' : 'application/json'
+                //}
+                    
+            }).then(function(response) {
+    
+                let link2 = $('<a>').attr('href', response.sourceUrl).text(response.title);
+
+                $('#searchTitle2').append(link2);
+                console.log(response);
+
+                let recipeCall3 = `https://api.spoonacular.com/recipes/${ id3 }/information?apiKey=${ spoonKey }&includeNutrition=false`
+        
+                $.ajax({
+                    url: recipeCall3,
+                    method:'GET',
+
+                }).then(function(response) {
+        
+                    let link3 = $('<a>').attr('href', response.sourceUrl).text(response.title);
+        
+                    $('#searchTitle3').append(link3);
+                    console.log(response);
+                
+                });
+            
+            });
+        
+        });
     });
 
 };
