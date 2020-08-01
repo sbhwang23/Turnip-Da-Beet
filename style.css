@@ -11,14 +11,14 @@
 header {
     align-items: center;
     background-color: rgba(249, 253, 184, 0.911);
-    background-image: url(/turnip.png);
+    background-image: url(turnip.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
     flex-direction: column;
     grid-area: h;
-    height: 200px;
+    /* height: 200px; */
     justify-content: center;
     padding: 20px;
     text-align: center;
@@ -40,7 +40,7 @@ h1 {
             'm r r'
             'f f f';
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 34px auto 50px;
+    grid-template-rows: 200px 34px auto 50px;
     height: 100vh;
 }
 
@@ -87,7 +87,6 @@ h1 {
     align-items: center;
     display: flex;
     grid-area: m;
-    /* height: 70.4%; */
     max-height: 100vh;
     justify-content: center;
     overflow: scroll;
@@ -99,10 +98,25 @@ h1 {
     text-transform: uppercase;
 }
 
+#track-view {
+    height: 100%;
+    text-align: center;
+}
+
+.card {
+    margin: 10px auto;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+
 footer {
     align-items: center;
     background-color: rgb(129, 27, 129);
-    background-image: url(/turnip.png);
+    background-image: url(turnip.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

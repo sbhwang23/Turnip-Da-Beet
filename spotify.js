@@ -32,6 +32,8 @@ let initialCall = "https://accounts.spotify.com/api/token";
                     
         }).then(function(response) {
             //let x = Math.floor(Math.random() * 49);
+            $('.title').append(`<h2> ${ingredient1} PLAYLIST</h2>`)
+
             let img1 = $('<img>').attr('src', response.tracks.items[0].album.images[2].url);
             let img2 = $('<img>').attr('src', response.tracks.items[1].album.images[2].url);
             let img3 = $('<img>').attr('src', response.tracks.items[2].album.images[2].url);
@@ -40,39 +42,25 @@ let initialCall = "https://accounts.spotify.com/api/token";
             let img6 = $('<img>').attr('src', response.tracks.items[5].album.images[2].url);
             let img7 = $('<img>').attr('src', response.tracks.items[6].album.images[2].url);
             let img8 = $('<img>').attr('src', response.tracks.items[7].album.images[2].url);
-            let link1 = $('<a>').attr('href', response.tracks.items[0].external_urls.spotify).text(response.tracks.items[0].name);
-            let link2 = $('<a>').attr('href', response.tracks.items[1].external_urls.spotify).text(response.tracks.items[1].name);
-            let link3 = $('<a>').attr('href', response.tracks.items[2].external_urls.spotify).text(response.tracks.items[2].name);
-            let link4 = $('<a>').attr('href', response.tracks.items[3].external_urls.spotify).text(response.tracks.items[3].name);
-            let link5 = $('<a>').attr('href', response.tracks.items[4].external_urls.spotify).text(response.tracks.items[4].name);
-            let link6 = $('<a>').attr('href', response.tracks.items[5].external_urls.spotify).text(response.tracks.items[5].name);
-            let link7 = $('<a>').attr('href', response.tracks.items[6].external_urls.spotify).text(response.tracks.items[6].name);
-            let link8 = $('<a>').attr('href', response.tracks.items[7].external_urls.spotify).text(response.tracks.items[7].name);
-            $('#btn1').append(link1);
-            $('#btn2').append(link2);
-            $('#btn3').append(link3);
-            $('#btn4').append(link4);
-            $('#btn5').append(link5);
-            $('#btn6').append(link6);
-            $('#btn7').append(link7);
-            $('#btn8').append(link8);
-            $('.img1').append(img1);
-            $('.img2').append(img2);
-            $('.img3').append(img3);
-            $('.img4').append(img4);
-            $('.img5').append(img5);
-            $('.img6').append(img6);
-            $('.img7').append(img7);
-            $('.img8').append(img8);
-            $('.title').append(`<h2> ${ingredient1} PLAYLIST</h2>`)
-            $('.track1').append(`<p>${response.tracks.items[0].artists[0].name}</p>`);
-            $('.track2').append(`<p>${response.tracks.items[1].artists[0].name}</p>`);
-            $('.track3').append(`<p>${response.tracks.items[2].artists[0].name}</p>`);
-            $('.track4').append(`<p>${response.tracks.items[3].artists[0].name}</p>`);
-            $('.track5').append(`<p>${response.tracks.items[4].artists[0].name}</p>`);
-            $('.track6').append(`<p>${response.tracks.items[5].artists[0].name}</p>`);
-            $('.track7').append(`<p>${response.tracks.items[6].artists[0].name}</p>`);
-            $('.track8').append(`<p>${response.tracks.items[7].artists[0].name}</p>`);
+            
+            let link1 = $('<a>').attr('href', response.tracks.items[0].external_urls.spotify).attr('target', '_blank').text(response.tracks.items[0].name);
+            let link2 = $('<a>').attr('href', response.tracks.items[1].external_urls.spotify).attr('target', '_blank').text(response.tracks.items[1].name);
+            let link3 = $('<a>').attr('href', response.tracks.items[2].external_urls.spotify).attr('target', '_blank').text(response.tracks.items[2].name);
+            let link4 = $('<a>').attr('href', response.tracks.items[3].external_urls.spotify).attr('target', '_blank').text(response.tracks.items[3].name);
+            let link5 = $('<a>').attr('href', response.tracks.items[4].external_urls.spotify).attr('target', '_blank').text(response.tracks.items[4].name);
+            let link6 = $('<a>').attr('href', response.tracks.items[5].external_urls.spotify).attr('target', '_blank').text(response.tracks.items[5].name);
+            let link7 = $('<a>').attr('href', response.tracks.items[6].external_urls.spotify).attr('target', '_blank').text(response.tracks.items[6].name);
+            let link8 = $('<a>').attr('href', response.tracks.items[7].external_urls.spotify).attr('target', '_blank').text(response.tracks.items[7].name);
+            
+            $('.track1').append(img1).append(link1).append(`<p>${response.tracks.items[0].artists[0].name}</p>`);
+            $('.track2').append(img2).append(link2).append(`<p>${response.tracks.items[1].artists[0].name}</p>`);
+            $('.track3').append(img3).append(link3).append(`<p>${response.tracks.items[2].artists[0].name}</p>`);
+            $('.track4').append(img4).append(link4).append(`<p>${response.tracks.items[3].artists[0].name}</p>`);
+            $('.track5').append(img5).append(link5).append(`<p>${response.tracks.items[4].artists[0].name}</p>`);
+            $('.track6').append(img6).append(link6).append(`<p>${response.tracks.items[5].artists[0].name}</p>`);
+            $('.track7').append(img7).append(link7).append(`<p>${response.tracks.items[6].artists[0].name}</p>`);
+            $('.track8').append(img8).append(link8).append(`<p>${response.tracks.items[7].artists[0].name}</p>`);
+            
 
             //console.log(response.tracks.items[0].album.images[0].url)
             //console.log(response.tracks);
@@ -80,10 +68,16 @@ let initialCall = "https://accounts.spotify.com/api/token";
         });
     }; 
 
+
     $("#searchButton").on("click", function (event) {
         event.preventDefault();
         let ingredient1 = $("#userInput").val().trim();
-
+        $('.title').empty();
+        for (let i = 1; i < 9; i++) {
+            // $(`#btn${ i }`).empty();
+            // $(`.img${ i }`).empty();
+            $(`.track${ i }`).empty();
+        }
         displayPlaylist(ingredient1);
     });
 
