@@ -38,9 +38,6 @@ function displayRecipes(spoonIngredient) {
             $.ajax({
                 url: recipeCall2,
                 method:'GET',
-                //headers: {
-                //    'Content-Type' : 'application/json'
-                //}
                     
             }).then(function(response) {
     
