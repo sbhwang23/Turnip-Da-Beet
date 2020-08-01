@@ -9,9 +9,17 @@
 }
 
 header {
+    align-items: center;
     background-color: rgba(249, 253, 184, 0.911);
+    background-image: url(/turnip.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
     grid-area: h;
-    height: 100px;
+    height: 200px;
+    justify-content: center;
     padding: 20px;
     text-align: center;
     width: 100%;
@@ -24,7 +32,6 @@ h1 {
 }
 
 .grid {
-
     background-image: linear-gradient(rgba(247, 253, 159, 0.76), rgb(129, 27, 129));
     display: grid;
     grid-template-areas: 
@@ -45,8 +52,17 @@ h1 {
     /* width: 200px; */
 }
 
+#searchButton {
+    background-color: rgba(247, 253, 159, 0.76);
+    border-width: thin;
+}
+
 .recipesEl {
+    align-items: center;
+    display: flex;
     grid-area: r;
+    justify-content: center;
+    text-align: center;
     /* height: 100%; */
     width: 100%;
 }
@@ -68,11 +84,15 @@ h1 {
 }
 
 .musicEl {
+    align-items: center;
+    display: flex;
     grid-area: m;
     /* height: 70.4%; */
     max-height: 100vh;
+    justify-content: center;
     overflow: scroll;
     padding: 10px;
+    text-align: center;
 }
 
 .title {
@@ -80,8 +100,17 @@ h1 {
 }
 
 footer {
+    align-items: center;
     background-color: rgb(129, 27, 129);
+    background-image: url(/turnip.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
     grid-area: f;
+    height: 40px;
+    justify-content: center;
     text-align: center;
     width: 100%;
 }
