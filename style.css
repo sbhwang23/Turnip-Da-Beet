@@ -17,6 +17,7 @@ header {
     background-size: contain;
     display: flex;
     flex-direction: column;
+    grid-area: h;
     height: 200px;
     justify-content: center;
     padding: 20px;
@@ -34,10 +35,13 @@ h1 {
     background-image: linear-gradient(rgba(247, 253, 159, 0.76), rgb(129, 27, 129));
     display: grid;
     grid-template-areas: 
+            'h h h'
             's r r'
-            'm r r';
+            'm r r'
+            'f f f';
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 34px auto;
+    grid-template-rows: 100px 34px auto 50px;
+    height: 100vh;
 }
 
 .searchEl {
@@ -80,10 +84,15 @@ h1 {
 }
 
 .musicEl {
+    align-items: center;
+    display: flex;
     grid-area: m;
-    height: 70.4%;
+    /* height: 70.4%; */
+    max-height: 100vh;
+    justify-content: center;
     overflow: scroll;
     padding: 10px;
+    text-align: center;
 }
 
 .title {
@@ -99,6 +108,7 @@ footer {
     background-size: contain;
     display: flex;
     flex-direction: column;
+    grid-area: f;
     height: 40px;
     justify-content: center;
     text-align: center;
