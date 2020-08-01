@@ -3,6 +3,13 @@
 //let client_secret = "1825c9d95ef44bce95ba85bdc50c0c5e";
 let initialCall = "https://accounts.spotify.com/api/token";
 
+let ingredientOnPage = 'beets';
+let storedIngredient = JSON.parse(localStorage.getItem('ingredient'));
+
+if (storedIngredient !== null) {
+    ingredientOnPage = storedIngredient;
+}
+
 //$(document).ready(function() {
 
     function displayPlaylist(ingredient1) { 
@@ -68,14 +75,14 @@ let initialCall = "https://accounts.spotify.com/api/token";
         });
     }; 
 
+    displayPlaylist(ingredientOnPage);
 
-    $("#searchButton").on("click", function (event) {
+    $('#searchButton').on('click', function (event) {
         event.preventDefault();
-        let ingredient1 = $("#userInput").val().trim();
+        let ingredient1 = $('#userInput').val().trim();
+        localStorage.setItem('ingredient', JSON.stringify(ingredient1));
         $('.title').empty();
         for (let i = 1; i < 9; i++) {
-            // $(`#btn${ i }`).empty();
-            // $(`.img${ i }`).empty();
             $(`.track${ i }`).empty();
         }
         displayPlaylist(ingredient1);
