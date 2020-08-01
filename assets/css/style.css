@@ -11,7 +11,7 @@
 header {
     align-items: center;
     background-color: rgba(249, 253, 184, 0.911);
-    background-image: url(turnip.png);
+    background-image: url(/assets/css/images/turnip.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -116,7 +116,7 @@ a {
 footer {
     align-items: center;
     background-color: rgb(129, 27, 129);
-    background-image: url(turnip.png);
+    background-image: url(/assets/css/images/turnip.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
