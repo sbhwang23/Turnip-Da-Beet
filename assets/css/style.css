@@ -11,7 +11,7 @@
 header {
     align-items: center;
     background-color: rgba(249, 253, 184, 0.911);
-    background-image: url(/assets/css/images/turnip.png);
+    background-image: url(images/turnip.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -29,6 +29,11 @@ h1 {
     font-family: 'Ranchers', cursive;
     color:  rgb(192, 9, 79);
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px rgb(214, 31, 101), 0 0 20px rgb(214, 31, 101), 0 0 25px rgb(214, 31, 101), 0 0 30px rgb(214, 31, 101), 0 0 35px rgb(214, 31, 101);
+}
+
+
+h2 {
+    font-size: 20px;
 }
 
 .grid {
@@ -52,9 +57,19 @@ h1 {
     /* width: 200px; */
 }
 
+#userInput {
+    border-radius: 3px;
+    border-width: thin;
+    height: 25px;
+    padding: 0 3px;
+}
+
 #searchButton {
     background-color: rgba(247, 253, 159, 0.76);
     border-width: thin;
+    border-radius: 3px;
+    height: 25px;
+    width: 25px;
 }
 
 .recipesEl {
@@ -108,7 +123,9 @@ h1 {
 }
 
 a {
+    color: rgb(0, 0, 0);
     display: block;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -116,7 +133,7 @@ a {
 footer {
     align-items: center;
     background-color: rgb(129, 27, 129);
-    background-image: url(/assets/css/images/turnip.png);
+    background-image: url(images/turnip.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
