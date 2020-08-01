@@ -10,7 +10,6 @@
 
 header {
     align-items: center;
-    background-color: rgba(249, 253, 184, 0.911);
     background-image: url(images/turnip.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +17,6 @@ header {
     display: flex;
     flex-direction: column;
     grid-area: h;
-    /* height: 200px; */
     justify-content: center;
     padding: 20px;
     text-align: center;
@@ -54,7 +52,6 @@ h2 {
     height: min-content;
     padding: 5px;
     text-align: center;
-    /* width: 200px; */
 }
 
 #userInput {
@@ -78,20 +75,11 @@ h2 {
     grid-area: r;
     justify-content: center;
     text-align: center;
-    /* height: 100%; */
     width: 100%;
-}
-
-#searchResults {
-    /* height: 100%; */
 }
 
 .recipe {
     cursor: pointer;
-}
-
-#recipeDisplay {
-    /* height: 100%; */
 }
 
 .hide {
@@ -132,7 +120,6 @@ a {
 
 footer {
     align-items: center;
-    background-color: rgb(129, 27, 129);
     background-image: url(images/turnip.png);
     background-position: center;
     background-repeat: no-repeat;
