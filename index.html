@@ -10,7 +10,7 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -34,23 +34,24 @@
         <section class='recipesEl'>
             <div id='searchResults' >
                 <div id='result1' class='recipe'>
-                    <h2 id='searchTitle1'>Recipe1</h2>
-                    <img id='searchPicture1'>
+                    <h2 id='searchTitle1'></h2>
+                    <div id='searchPicture1'></div>
+                    <div id="recipeInfo1"></div>
                 </div>
                 <div id='result2' class='recipe'>
-                    <h2 id='searchTitle2'>Recipe2</h2>
-                    <img id='searchPicture2'>
+                    <h2 id='searchTitle2'></h2>
+                    <div id='searchPicture2'></div>
 
                 </div>
                 <div id=result3 class='recipe'>
-                    <h2 id='searchTitle3'>Recipe3</h2>
-                    <img id='searchPicture3'>
+                    <h2 id='searchTitle3'></h2>
+                    <div id='searchPicture3'></div>
                 </div>
             </div>
             <div id='recipeDisplay' class='hide' >
                 <h2 id=recipeTitle></h2>
-                <img id=recipePicture>
-                <span id='recipeAPI'></span>
+                <div id=recipePicture></div>
+                <div id='recipeAPI'></div>
                 <button id="backButton">Back to Search Results</button>
             </div>
         
@@ -85,8 +86,8 @@
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src='main.js'></script>
-    <script src='spotify.js'></script>
-    <script src='spoonacular.js'></script>
+    <script src='assets/javascript/main.js'></script>
+    <script src='assets/javascript/spotify.js'></script>
+    <script src='assets/javascript/spoonacular.js'></script>
 </body>
 </html>
