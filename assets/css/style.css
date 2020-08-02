@@ -61,7 +61,7 @@ h4 {
     
 }
 
-.grid {
+/* .grid {
     display: grid;
     grid-template-areas: 
             'h h h'
@@ -71,7 +71,7 @@ h4 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 200px 34px auto 50px;
     height: 100vh;
-}
+} */
 
 .searchEl {
     grid-area: s;
@@ -96,10 +96,11 @@ h4 {
 }
 
 .recipesEl {
-    align-items: flex-end;
+    align-items: flex-start;
     display: flex;
     grid-area: r;
     justify-content: center;
+    padding-top: 7%;
     text-align: center;
     width: 100%;
 }
