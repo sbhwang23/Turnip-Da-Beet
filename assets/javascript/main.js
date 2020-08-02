@@ -9,7 +9,7 @@ $('#searchButton').on('click', function(e) {
 // function to change what is displayed in the #recipesEl section
 function changeDisplay() {
     $('#searchResults').toggleClass('hide');
-    $('#recipeDisplay').toggleClass('hide');
+    $('.recipe-display').toggleClass('hide');
 }
 
 // when user clicks a recipe title from the search results the recipe will display
