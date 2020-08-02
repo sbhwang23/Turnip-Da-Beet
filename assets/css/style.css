@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ranchers&display=swap');
 
+:root {
+    /*background-image: linear-gradient(rgba(247, 253, 159, 0.76), rgb(129, 27, 129));*/
+    /*background: #c0094f;*/
+    background-image: linear-gradient(rgba(247, 253, 159, 0.76), rgb(186 89 136));
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
@@ -35,7 +45,6 @@ h2 {
 }
 
 .grid {
-    background-image: linear-gradient(rgba(247, 253, 159, 0.76), rgb(129, 27, 129));
     display: grid;
     grid-template-areas: 
             'h h h'
