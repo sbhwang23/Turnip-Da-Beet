@@ -61,7 +61,7 @@ h4 {
     
 }
 
-/* .grid {
+.grid {
     display: grid;
     grid-template-areas: 
             'h h h'
@@ -71,7 +71,7 @@ h4 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 200px 34px auto 50px;
     height: 100vh;
-} */
+}
 
 .searchEl {
     grid-area: s;
@@ -118,7 +118,12 @@ h4 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 5%;
     padding: 1rem;
+}
+
+h3 {
+    font-weight: bold;
 }
 
 #searchPicture1, #searchPicture2, #searchPicture3 {
@@ -154,12 +159,36 @@ h4 {
     display: none;
 }
 
+.recipe-display {
+    padding: 5% 10%;
+}
+
+.recipe-picture {
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
+
+.recipe-description {
+    justify-content: space-evenly;
+    margin: 7% auto;
+    text-align: left;
+}
+
+.backButton {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid  #333;
+    border-radius: 3px;
+    color:  rgb(192, 9, 79);
+    font-size: 0.85rem;
+    padding: 0 5px;
+}
+
 .musicEl {
-    align-items: center;
+    /* align-items: center; */
     display: flex;
     grid-area: m;
     max-height: 100vh;
-    justify-content: center;
+    /* justify-content: center; */
     overflow: scroll;
     padding: 10px;
     text-align: center;
@@ -173,6 +202,7 @@ h4 {
 
 #track-view {
     height: 100%;
+    margin: 0 auto;
     text-align: center;
 }
 
