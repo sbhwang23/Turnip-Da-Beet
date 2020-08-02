@@ -178,17 +178,16 @@ h4 {
 
 .tracks {
     display: flex;
-    flex-direction: column;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 1rem;
+    overflow-y: scroll;
+    padding: 3rem 1rem 1rem 1rem;
     border: .2rem solid #c0094f;
     background-color: rgb(253 7 92 / 6%);
     border-radius: 5rem;
+    width: 100vw;
 }
 .card {
-    margin: 10px auto;
+    padding: .5rem 1.5rem 0rem 1.5rem;
 }
 
 a {
