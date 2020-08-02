@@ -57,7 +57,7 @@ h3 {
     font-weight: 200;
 }
 
-.grid {
+/*.grid {
     display: grid;
     grid-template-areas: 
             'h h h'
@@ -66,8 +66,8 @@ h3 {
             'f f f';
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 200px 34px auto 50px;
-    height: 100vh;
-}
+    height: 100vh;*/
+
 
 .searchEl {
     grid-area: s;
@@ -160,7 +160,7 @@ h3 {
 }
 
 .recipe-picture {
-    border-radius: 5px;
+    border-radius: 50% 50%;
     margin-bottom: 5%;
 }
 
@@ -171,12 +171,21 @@ h3 {
 }
 
 .backButton {
-    background-color: rgb(255, 255, 255);
-    border: 1px solid  #333;
+    background-color: transparent;
+    border: 5px solid #c0094f;
     border-radius: 3px;
-    color:  rgb(192, 9, 79);
+    color: #e0e0e0;
     font-size: 0.85rem;
-    padding: 0 5px;
+    padding: 5px 5px;
+    width: 8rem;
+    text-transform: uppercase;
+}
+
+.backButton:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.212);
+    color: #c0094f;
+    transition: 0.6s;
 }
 
 .musicEl {
@@ -210,7 +219,7 @@ h3 {
     border: .2rem solid #c0094f;
     background-color: rgb(253 7 92 / 6%);
     border-radius: 5rem;
-    width: 100vw;
+    width: 95vw;
 }
 .card {
     padding: .5rem 1.5rem 0rem 1.5rem;
@@ -231,7 +240,6 @@ footer {
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
-    flex-direction: column;
     grid-area: f;
     height: 40px;
     justify-content: center;
