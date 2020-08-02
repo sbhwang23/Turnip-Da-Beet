@@ -13,7 +13,7 @@ function changeDisplay() {
 }
 
 // when user clicks a recipe title from the search results the recipe will display
-$('#searchResults').on('click', 'h2', function() {
+$('#searchResults').on('click', 'h3', function() {
     changeDisplay();
 });
 
