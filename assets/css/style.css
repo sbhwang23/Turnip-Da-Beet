@@ -57,16 +57,6 @@ h3 {
     font-weight: 200;
 }
 
-/*.grid {
-    display: grid;
-    grid-template-areas: 
-            'h h h'
-            's r r'
-            'm r r'
-            'f f f';
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 34px auto 50px;
-    height: 100vh;*/
 
 
 .searchEl {
@@ -245,4 +235,23 @@ footer {
     justify-content: center;
     text-align: center;
     width: 100%;
+}
+
+@media screen and (min-width: 580px) {
+    .grid {
+        display: grid;
+        grid-template-areas: 
+                'h h h'
+                's r r'
+                'm r r'
+                'f f f';
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px 34px auto 50px;
+        height: 100vh;
+    }
+
+    .tracks {
+        flex-direction: column;
+        width: 100%;
+    }
 }
