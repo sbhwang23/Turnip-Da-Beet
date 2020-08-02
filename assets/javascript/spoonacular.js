@@ -1,5 +1,12 @@
 let spoonKey =  'a9839f4410034ed99b07fb79a03db585';
 
+let searchedIngredient = 'beets';
+let storedSearchedIngredient = JSON.parse(localStorage.getItem('searchedIngredient'));
+
+if (storedSearchedIngredient !== null) {
+    searchedIngredient = storedSearchedIngredient;
+}
+
 function displayRecipes(spoonIngredient) {
     let spoonCall = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${ spoonKey }&ingredients=${ spoonIngredient }`;
     
@@ -77,9 +84,18 @@ function displayRecipes(spoonIngredient) {
 
 };
 
+displayRecipes(searchedIngredient);
+
 $("#searchButton").on("click", function (event) {
     event.preventDefault();
     let spoonIngredient = $("#userInput").val().trim();
+
+    localStorage.setItem('searchedIngredient', JSON.stringify(spoonIngredient));
+
+    for (let i = 1; i < 4; i++) {
+        $(`#searchTitle${ i }`).empty();
+        $(`#searchPicture${ i }`).empty();
+    }
 
     displayRecipes(spoonIngredient);
 });
