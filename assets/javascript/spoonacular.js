@@ -1,4 +1,4 @@
-let spoonKey =  '4018f2e7f8794064be13ba2ed146e4c2';
+let spoonKey =  'a9839f4410034ed99b07fb79a03db585';
 
 function displayRecipes(spoonIngredient) {
     let spoonCall = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${ spoonKey }&ingredients=${ spoonIngredient }`;
