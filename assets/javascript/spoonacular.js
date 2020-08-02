@@ -1,4 +1,4 @@
-let spoonKey =  'a9839f4410034ed99b07fb79a03db585';
+let spoonKey =  'f72fdee24c7948f0a86323955f85acee';
 
 let searchedIngredient = 'beets';
 let storedSearchedIngredient = JSON.parse(localStorage.getItem('searchedIngredient'));
