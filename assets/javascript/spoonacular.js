@@ -28,7 +28,7 @@ function displayRecipes(spoonIngredient) {
         $('#recipePicture1').attr('src', response[0].image);
         $('#recipePicture2').attr('src', response[1].image);
         $('#recipePicture3').attr('src', response[2].image);
-        console.log(response);
+        // console.log(response);
 
         let recipeCall1 = `https://api.spoonacular.com/recipes/${ id1 }/information?apiKey=${ spoonKey }&includeNutrition=false`
         
@@ -44,7 +44,7 @@ function displayRecipes(spoonIngredient) {
             $('#recipeTitle1').append(link1);
             $('#searchTitle1').append(title1);
             $('#recipeAPI1').append(instructions1);
-            console.log(response);
+            // console.log(response);
             
             let recipeCall2 = `https://api.spoonacular.com/recipes/${ id2 }/information?apiKey=${ spoonKey }&includeNutrition=false`
         
@@ -60,7 +60,7 @@ function displayRecipes(spoonIngredient) {
                 $('#searchTitle2').append(title2);
                 $('#recipeTitle2').append(link2);
                 $('#recipeAPI2').append(instructions2);
-                console.log(response);
+                // console.log(response);
 
                 let recipeCall3 = `https://api.spoonacular.com/recipes/${ id3 }/information?apiKey=${ spoonKey }&includeNutrition=false`
         
@@ -76,7 +76,7 @@ function displayRecipes(spoonIngredient) {
                     $('#searchTitle3').append(title3);
                     $('#recipeTitle3').append(link3);
                     $('#recipeAPI3').append(instructions3);
-                    console.log(response);
+                    // console.log(response);
                 
                 });
             
