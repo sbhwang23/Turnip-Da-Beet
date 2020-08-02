@@ -1,4 +1,4 @@
-let spoonKey =  'd17eae37078c478484b8f0fa195e181d';
+let spoonKey =  '79b3574dd2f1496fb74963f003f4815f';
 
 let searchedIngredient = 'beets';
 let storedSearchedIngredient = JSON.parse(localStorage.getItem('searchedIngredient'));
@@ -25,6 +25,9 @@ function displayRecipes(spoonIngredient) {
         $('#searchPicture1').append(img1);
         $('#searchPicture2').append(img2);
         $('#searchPicture3').append(img3);
+        $('#recipePicture1').attr('src', response[0].image);
+        $('#recipePicture2').attr('src', response[1].image);
+        $('#recipePicture3').attr('src', response[2].image);
         console.log(response);
 
         let recipeCall1 = `https://api.spoonacular.com/recipes/${ id1 }/information?apiKey=${ spoonKey }&includeNutrition=false`
@@ -36,7 +39,7 @@ function displayRecipes(spoonIngredient) {
         }).then(function(response) {
 
             let instructions1 = $('<p>').text(response.instructions);
-            let link1 = $('<a>').attr('href', response.sourceUrl).text(response.title);
+            let link1 = $('<a>').attr('href', response.sourceUrl).attr('target', '_blank').text(response.title);
             let title1 = $('<h3>').text(response.title);
             $('#recipeTitle1').append(link1);
             $('#searchTitle1').append(title1);
@@ -52,7 +55,7 @@ function displayRecipes(spoonIngredient) {
             }).then(function(response) {
                 
                 let instructions2 = $('<p>').text(response.instructions);
-                let link2 = $('<a>').attr('href', response.sourceUrl).text(response.title);
+                let link2 = $('<a>').attr('href', response.sourceUrl).attr('target', '_blank').text(response.title);
                 let title2 = $('<h3>').text(response.title);
                 $('#searchTitle2').append(title2);
                 $('#recipeTitle2').append(link2);
@@ -68,7 +71,7 @@ function displayRecipes(spoonIngredient) {
                 }).then(function(response) {
                     
                     let instructions3 = $('<p>').text(response.instructions);
-                    let link3 = $('<a>').attr('href', response.sourceUrl).text(response.title);
+                    let link3 = $('<a>').attr('href', response.sourceUrl).attr('target', '_blank').text(response.title);
                     let title3 = $('<h3>').text(response.title);
                     $('#searchTitle3').append(title3);
                     $('#recipeTitle3').append(link3);

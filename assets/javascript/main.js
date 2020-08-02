@@ -7,28 +7,28 @@ $(document).ready(function() {
     });
 
     function changeDisplay1() {
-        $('#result1').toggleClass('hide');
+        $('#searchResults').toggleClass('hide');
         $('#recipeDisplay1').toggleClass('hide');
     }
     function changeDisplay2() {
-        $('#result2').toggleClass('hide');
+        $('#searchResults').toggleClass('hide');
         $('#recipeDisplay2').toggleClass('hide');
     }
     function changeDisplay3() {
-        $('#result3').toggleClass('hide');
+        $('#searchResults').toggleClass('hide');
         $('#recipeDisplay3').toggleClass('hide');
     }
 
     // when user clicks a recipe title from the search results the recipe will display
-    $('#searchTitle1').on('click', 'h3', function() {
+    $('#result1').on('click', function() {
         changeDisplay1();
     });
 
-    $('#searchTitle2').on('click', 'h3', function() {
+    $('#result2').on('click', function() {
         changeDisplay2();
     });
 
-    $('#searchTitle3').on('click', 'h3', function() {
+    $('#result3').on('click', function() {
         changeDisplay3();
     });
 
