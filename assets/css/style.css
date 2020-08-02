@@ -78,6 +78,34 @@ h2 {
     width: 100%;
 }
 
+.recipe-display {
+
+    text-align: center;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+}
+
+#searchPicture1 > *  {
+    height: 8rem;
+    width: 8rem;
+    border: .5rem solid white;
+    border-radius: 50% 50%;
+}
+
+#searchPicture2 > *  {
+    height: 8rem;
+    width: 8rem;
+    border: .5rem solid white;
+    border-radius: 50% 50%;
+}
+
+#searchPicture3 > *  {
+    height: 8rem;
+    width: 8rem;
+    border: .5rem solid white;
+    border-radius: 50% 50%;
+}
+
 .recipe {
     cursor: pointer;
 }

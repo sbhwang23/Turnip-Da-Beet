@@ -28,9 +28,12 @@ function displayRecipes(spoonIngredient) {
                 
         }).then(function(response) {
 
+            let instructions1 = $('<p>').text(response.instructions);
             let link1 = $('<a>').attr('href', response.sourceUrl).text(response.title);
-
-            $('#searchTitle1').append(link1);
+            let title1 = $('<h3>').text(response.title);
+            $('#recipeTitle1').append(link1);
+            $('#searchTitle1').append(title1);
+            $('#recipeAPI1').append(instructions1);
             console.log(response);
             
             let recipeCall2 = `https://api.spoonacular.com/recipes/${ id2 }/information?apiKey=${ spoonKey }&includeNutrition=false`
@@ -40,10 +43,13 @@ function displayRecipes(spoonIngredient) {
                 method:'GET',
                     
             }).then(function(response) {
-    
+                
+                let instructions2 = $('<p>').text(response.instructions);
                 let link2 = $('<a>').attr('href', response.sourceUrl).text(response.title);
-
-                $('#searchTitle2').append(link2);
+                let title2 = $('<h3>').text(response.title);
+                $('#searchTitle2').append(title2);
+                $('#recipeTitle2').append(link2);
+                $('#recipeAPI2').append(instructions2);
                 console.log(response);
 
                 let recipeCall3 = `https://api.spoonacular.com/recipes/${ id3 }/information?apiKey=${ spoonKey }&includeNutrition=false`
@@ -53,10 +59,13 @@ function displayRecipes(spoonIngredient) {
                     method:'GET',
 
                 }).then(function(response) {
-        
+                    
+                    let instructions3 = $('<p>').text(response.instructions);
                     let link3 = $('<a>').attr('href', response.sourceUrl).text(response.title);
-        
-                    $('#searchTitle3').append(link3);
+                    let title3 = $('<h3>').text(response.title);
+                    $('#searchTitle3').append(title3);
+                    $('#recipeTitle3').append(link3);
+                    $('#recipeAPI3').append(instructions3);
                     console.log(response);
                 
                 });
