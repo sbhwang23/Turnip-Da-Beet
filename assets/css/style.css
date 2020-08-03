@@ -40,7 +40,6 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 2.4rem;
-    /*font-family: 'Ranchers', cursive;*/
     color:  rgb(192, 9, 79);
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px rgb(214, 31, 101), 0 0 20px rgb(214, 31, 101), 0 0 25px rgb(214, 31, 101), 0 0 30px rgb(214, 31, 101), 0 0 35px rgb(214, 31, 101);
 }
@@ -48,7 +47,7 @@ h1 {
 
 h2 {
     font-size: 20px;
-    color: #c0094f;
+    color: black;
     font-weight: 200;
 }
 
@@ -108,10 +107,6 @@ h3 {
     padding: 1rem;
 }
 
-h3 {
-    font-weight: bold;
-}
-
 #searchPicture1, #searchPicture2, #searchPicture3 {
     margin-top: 1rem;
 }
@@ -152,6 +147,7 @@ h3 {
 .recipe-picture {
     border-radius: 50% 50%;
     margin-bottom: 5%;
+    border: .5rem solid white;
 }
 
 .recipe-description {
@@ -184,7 +180,7 @@ h3 {
     grid-area: m;
     max-height: 100vh;
     /* justify-content: center; */
-    overflow: scroll;
+    overflow-y: scroll;
     padding: 10px;
     text-align: center;
 }
@@ -253,5 +249,6 @@ footer {
     .tracks {
         flex-direction: column;
         width: 100%;
+        overflow-y: revert;
     }
 }
